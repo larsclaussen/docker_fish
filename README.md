@@ -1,11 +1,14 @@
 # docker_fish
 
 Some fish utility functions for an application run with docker-compose.
+Please note, at the moment the stack has to be up and running for the
+functions to work because under the hood the use the
+``docker-compose exec`` command.
 
 dcomp-django
 ------------
 
-Usage::
+Usage:
 
     dcomp-django <service name> <django command> [args]
 
