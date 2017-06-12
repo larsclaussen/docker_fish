@@ -14,7 +14,7 @@ service name defined in the docker-compose file. The second is the django
 command you want to execute. If that command takes further arguments just
 pass them in as args or kwargs.
 
-Example::
+Example:
 
     dcomp-django machine-manager runserver 0.0.0.0:5004
 
@@ -22,7 +22,7 @@ Example::
 dcomp-superv
 ------------
 
-Usage::
+Usage:
 
     dcomp-superv <service name> <supervisor command> [args]
 
@@ -31,6 +31,6 @@ service name defined in the docker-compose file. The second is the supervisorctl
 command you want to execute. If that command takes further arguments just
 pass them in as args or kwargs.
 
-Example::
+Example:
 
     dcomp-superv machine-manager fg gunicorn
