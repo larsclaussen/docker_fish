@@ -1,7 +1,7 @@
 # docker_fish
 
 Some fish utility functions for an application run with docker-compose. Where
-applicable the ``docker-compose exec`` command is used. For dcomp-django is
+applicable the ``docker-compose exec`` command is used. For ``dcomp-django`` is
 falls back to the the ``docker-compose run --rm`` command. ``dcomp-test``
 always issues the ``docker-compose run --rm`` command.
 
@@ -10,7 +10,7 @@ dcomp-django
 
 Usage:
 
-    dcomp-django <service name> <django command> [args]
+    dcomp-django <service name> <django command> [args] [kwargs]
 
 Run django commands in the docker container. The first argument is the
 service name defined in the docker-compose file. The second is the django
@@ -27,7 +27,7 @@ dcomp-superv
 
 Usage:
 
-    dcomp-superv <service name> <supervisor command> [args]
+    dcomp-superv <service name> <supervisorctl command> [args]
 
 Run supervisorctl commands in the docker container. The first argument is the
 service name defined in the docker-compose file. The second is the supervisorctl
@@ -43,7 +43,7 @@ dcomp-test
 
 Usage:
 
-    dcomp-test <service name> [args]
+    dcomp-test <service name> [args] [kwargs]
 
 Run bin/test in the docker container. The first argument is the
 service name defined in the docker-compose file. You can pass in
