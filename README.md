@@ -1,9 +1,9 @@
 # docker_fish
 
-Some fish utility functions for an application run with docker-compose.
-Please note, at the moment the stack has to be up and running for the
-functions to work because under the hood the use the
-``docker-compose exec`` command.
+Some fish utility functions for an application run with docker-compose. Where
+applicable the ``docker-compose exec`` command is used. For dcomp-django is
+falls back to the the ``docker-compose run --rm`` command. ``dcomp-test``
+always issues the ``docker-compose run --rm`` command.
 
 dcomp-django
 ------------
@@ -37,3 +37,18 @@ pass them in as args or kwargs.
 Example:
 
     dcomp-superv machine-manager fg gunicorn
+
+dcomp-test
+------------
+
+Usage:
+
+    dcomp-test <service name> [args]
+
+Run bin/test in the docker container. The first argument is the
+service name defined in the docker-compose file. You can pass in
+further arguments as args or kwargs.
+
+Example:
+
+    dcomp-test lib
