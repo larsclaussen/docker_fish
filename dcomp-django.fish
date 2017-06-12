@@ -11,7 +11,7 @@ function dcomp-django
     if docker-compose exec $argv[1] echo "Container running..."
         set_color normal
         docker-compose exec $argv[1] bin/django $r_args
-	else
+    else
         docker-compose run --rm $argv[1] bin/django $r_args
     end
     set_color normal
