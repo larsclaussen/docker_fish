@@ -5,14 +5,14 @@ function dcomp-django
     end
 
     # path to where the docker-compose file resides
-	cd <my path>;
-	# execute django
+    cd <my path>;
+    # execute django
     set_color green
-	if docker-compose exec $argv[1] echo "Container running..."
-    	set_color normal
+    if docker-compose exec $argv[1] echo "Container running..."
+        set_color normal
 	    docker-compose exec $argv[1] bin/django $r_args
 	else
 	    docker-compose run --rm $argv[1] bin/django $r_args
-	end
-	set_color normal
+    end
+    set_color normal
 end
